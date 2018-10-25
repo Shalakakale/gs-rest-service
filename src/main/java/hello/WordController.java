@@ -4,5 +4,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WordController {
-    // TODO Implement the /words/{word} endpoint
+	@Autowired
+	public WordService wordService;
+    
+	@RequestMapping(value = "/words/{word}", method = RequestMethod.GET)
+	public ResponseDto getResponse(@PathVariable("words") String words) {
+		return wordService.getResponseDto(words);
+	}
+	
+	
 }
