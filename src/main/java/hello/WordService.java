@@ -1,5 +1,8 @@
 package hello;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class WordService {
     
 	static final int NO_OF_CHARS = 256; 
@@ -11,7 +14,7 @@ public class WordService {
 	 */
 	public boolean isPalindromeWord(String word) {
 		String revStr = "";
-		for(int i = word.length(); i>0; i--) {
+		for(int i = word.length()-1; i>=0; i--) {
 			revStr= revStr + word.charAt(i);
 		}
 		if(word.equals(revStr)) {

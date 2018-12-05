@@ -1,15 +1,14 @@
-package hello.;
+package hello;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class ResponseDto {
     
 	private String word;
 	private boolean palindrome;
 	private boolean anagramOfPalindrome;
 	
-	private String word;
-	private boolean palindrome;
-	private boolean anagramOfPalindrome;
 	
 	public String getWord() {
 		return word;
